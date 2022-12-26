@@ -8,5 +8,5 @@ clean:
 run: build
 	./_build/default/bin/main.exe
 
-_build/default/bin/main.exe: bin/main.ml
+_build/default/bin/main.exe: bin/main.ml lib/safe.ml
 	dune build
