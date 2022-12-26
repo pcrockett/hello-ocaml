@@ -1,13 +1,12 @@
 .PHONY: build clean run
 
-build: out/hello
+build: _build/default/bin/main.exe
 
 clean:
-	rm -Rf out
+	rm -Rf _build
 
-out/hello: src/hello.ml
-	mkdir --parent out
-	ocamlopt -o out/hello src/hello.ml
+run: build
+	./_build/default/bin/main.exe
 
-run: out/hello
-	./out/hello
+_build/default/bin/main.exe: bin/main.ml
+	dune build
