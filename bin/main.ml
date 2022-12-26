@@ -13,8 +13,7 @@ let sanitize_args = function
   | [|_|] -> Array.to_seq [|"World"|]
   | cli_args -> cli_args |> Array.to_seq |> Seq.drop 1
 
-let hello_message cli_args = cli_args
-  |> Util.join ~prefix:"Hello, " ~separator:" " ~suffix:"!"
+let hello_message cli_args = "Hello, " ^ (Util.join cli_args ~separator:" ") ^ "!"
 
 let main args =
   match args |> sanitize_args |> hello_message |> Safe.print_endline with
