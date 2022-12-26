@@ -1,17 +1,24 @@
 open Lib
 
-let message err = match err with
+let err_message err = match err with
   | Sys_error msg -> msg
   | _ -> Printexc.to_string err
 
 let handle err =
   match
-    err |> message |> Safe.prerr_endline
+    err |> err_message |> Safe.prerr_endline
   with _ -> 1
 
-let main msg =
-  match Safe.print_endline msg with
+let sanitize_args = function
+  | [|_|] -> Array.to_seq [|"World"|]
+  | cli_args -> cli_args |> Array.to_seq |> Seq.drop 1
+
+let hello_message cli_args = cli_args
+  |> Util.join ~prefix:"Hello, " ~separator:" " ~suffix:"!"
+
+let main args =
+  match args |> sanitize_args |> hello_message |> Safe.print_endline with
     | Error err -> handle err
     | Ok _ -> 0
 
-let () = "Hello, World" |> main |> exit
+let () = Sys.argv |> main |> exit
