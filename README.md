@@ -46,4 +46,4 @@ Among other things, it demonstrates:
 
 * [ ] Figure out testing
 * [ ] Code formatter / linter?
-* [ ] Get feedback from an experienced OCamler
+* [ ] [Get feedback from an experienced OCamler](https://fosstodon.org/@pcrock/109585554601601900)
