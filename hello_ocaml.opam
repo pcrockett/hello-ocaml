@@ -10,6 +10,7 @@ bug-reports: "https://github.com/pcrockett/hello-ocaml/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.6"}
+  "ounit2" {with-test}
   "odoc" {with-doc}
 ]
 build: [

@@ -19,7 +19,7 @@
  (name hello_ocaml)
  (synopsis "Taking OCaml for a spin")
  (description "Just a test to help get me started with OCaml")
- (depends ocaml dune))
+ (depends ocaml dune (ounit2 :with-test)))
 ; (tags
 ;  (topics "to describe" your project)))
 
