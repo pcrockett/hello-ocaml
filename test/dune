@@ -1,2 +1,5 @@
 (test
  (name hello_ocaml))
+
+(cram
+ (deps %{bin:hello_ocaml}))
