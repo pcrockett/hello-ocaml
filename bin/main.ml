@@ -5,9 +5,8 @@ let err_message err = match err with
   | _ -> Printexc.to_string err
 
 let handle err =
-  match
-    err |> err_message |> Safe.prerr_endline
-  with _ -> 1
+  err |> err_message |> Safe.prerr_endline |> ignore;
+  1
 
 let sanitize_args = function
   | [|_|] -> Array.to_seq [|"World"|]
