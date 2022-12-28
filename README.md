@@ -32,6 +32,6 @@ Among other things, it demonstrates:
 
 ### To do
 
-* [ ] Figure out testing
+* [x] Figure out testing
 * [ ] Code formatter / linter?
 * [ ] [Get feedback from an experienced OCamler](https://fosstodon.org/@pcrock/109585554601601900)
