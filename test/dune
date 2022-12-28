@@ -1,5 +1,6 @@
 (test
- (name hello_ocaml))
+ (name hello_ocaml)
+ (libraries lib ounit2))
 
 (cram
  (deps %{bin:hello_ocaml}))
