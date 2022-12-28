@@ -1,7 +1,9 @@
-.PHONY: build clean run test
+.PHONY: build ci clean run test
 
 build:
 	dune build
+
+ci: clean build test
 
 clean:
 	rm -Rf _build
