@@ -8,26 +8,14 @@ Make sure you have a [basic OCaml development environment](https://ocaml.org/doc
 [dune](https://dune.build/). Then run:
 
 ```bash
-make run
+make build run
 ```
 
 ### Usage
 
-_Recommended: Add `_build/default/bin` to your `PATH`. The [.envrc file](.envrc.template) will do that for you if you
-have direnv installed._
+Check out the end-to-end tests in [the Cram test file](test/cram.t) to see how the program should behave.
 
-```bash
-main.exe
-# Hello, World!
-
-main.exe Phil
-# Hello, Phil!
-
-main.exe Phil the Magnificent
-# Hello, Phil the Magnificent!
-```
-
-<small>_Yes, it's called `main.exe` even on a non-Windows system..._</small>
+Run `make test` to execute these tests.
 
 ### What is Demonstrated
 

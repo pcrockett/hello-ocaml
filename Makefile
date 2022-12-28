@@ -1,4 +1,4 @@
-.PHONY: build clean run
+.PHONY: build clean run test
 
 build:
 	dune build
@@ -6,5 +6,8 @@ build:
 clean:
 	rm -Rf _build
 
-run: build
+run:
 	./_build/default/bin/main.exe
+
+test:
+	dune test
