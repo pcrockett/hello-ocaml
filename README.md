@@ -34,4 +34,8 @@ Among other things, it demonstrates:
 
 * [x] Figure out testing
 * [ ] Code formatter / linter?
-* [ ] [Get feedback from an experienced OCamler](https://fosstodon.org/@pcrock/109585554601601900)
+* [x] [Get feedback from an experienced OCamler](https://fosstodon.org/@pcrock/109585554601601900)
+    * [x] Make `Util.join` parameters more explicit
+    * [ ] Resolve errors when running `opam install ocamlformat` on my dev machine
+    * [ ] Format codebase
+    * [ ] Capture stack trace for unexpected exceptions

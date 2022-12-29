@@ -4,6 +4,9 @@ let err_message err = match err with
   | Sys_error msg -> msg
   | _ -> Printexc.to_string err
 
+(** Write a "fatal" error message to stderr. If there's _another_ error while writing to stderr, swallow it.
+  @return the exit code the program should exit with
+*)
 let handle err =
   err |> err_message |> Safe.prerr_endline |> ignore;
   1
