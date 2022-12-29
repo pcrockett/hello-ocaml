@@ -11,6 +11,13 @@ Make sure you have a [basic OCaml development environment](https://ocaml.org/doc
 make build run
 ```
 
+_It seems like you need specifically OCaml 4.14.0 to compile this codebase:_
+
+* Use anything newer and you get OCaml 5.0, which seems to break `ocamlformat` because it's so new (as of this writing).
+* Use anything older and you'll get a stdlib with some missing `Seq` functions.
+
+I could be wrong about that.
+
 ### Usage
 
 Check out the end-to-end tests in [the Cram test file](test/cram.t) to see how the program should behave.
@@ -33,9 +40,9 @@ Among other things, it demonstrates:
 ### To do
 
 * [x] Figure out testing
-* [ ] Code formatter / linter?
+* [x] Code formatter / linter?
 * [x] [Get feedback from an experienced OCamler](https://fosstodon.org/@pcrock/109585554601601900)
     * [x] Make `Util.join` parameters more explicit
-    * [ ] Resolve errors when running `opam install ocamlformat` on my dev machine
-    * [ ] Format codebase
+    * [x] Resolve errors when running `opam install ocamlformat` on my dev machine
+    * [x] Format codebase
     * [ ] Capture stack trace for unexpected exceptions
