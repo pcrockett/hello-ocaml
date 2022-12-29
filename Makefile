@@ -1,12 +1,15 @@
-.PHONY: build ci clean run test
+.PHONY: build ci clean format run test
 
 build:
 	dune build
 
-ci: clean build test
+ci: clean build format test
 
 clean:
 	rm -Rf _build
+
+format:
+	dune fmt
 
 run:
 	./_build/default/bin/main.exe
