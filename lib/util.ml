@@ -4,8 +4,6 @@
 *)
 let join ?(separator = "") str_seq =
   let word_accumulator a index b =
-    match index with
-      | 0 -> b
-      | _ -> a ^ separator ^ b
+    match index with 0 -> b | _ -> a ^ separator ^ b
   in
-    Seq.fold_lefti word_accumulator "" str_seq
+  Seq.fold_lefti word_accumulator "" str_seq
