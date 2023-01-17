@@ -20,5 +20,5 @@ https://ocamlpro.com/fr/blog/2021_09_02_generating_static_and_portable_executabl
   $ file "$(command -v main.exe)" | grep --perl-regexp --only-matching "\w+ linked"
   statically linked
 
-  $ ldd "$(command -v main.exe)" 2>&1 | grep --fixed-strings --only-matching "Not a valid dynamic program"
-  "Not a valid dynamic program"
+  $ ldd "$(command -v main.exe)" 2>&1 | grep --fixed-strings --only-matching "not a dynamic executable"
+  not a dynamic executable

@@ -46,4 +46,4 @@ Among other things, it demonstrates:
     * [x] Resolve errors when running `opam install ocamlformat` on my dev machine
     * [x] Format codebase
     * [ ] Capture stack trace for unexpected exceptions
-* [ ] Implement (and test) [static linking](https://ocamlpro.com/fr/blog/2021_09_02_generating_static_and_portable_executables_with_ocaml)
+* [x] Implement (and test) [static linking](https://ocamlpro.com/fr/blog/2021_09_02_generating_static_and_portable_executables_with_ocaml)

@@ -1,4 +1,5 @@
 (executable
  (public_name hello_ocaml)
+ (flags (:standard -cclib -static))
  (name main)
  (libraries lib))
