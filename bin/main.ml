@@ -13,6 +13,6 @@ let handle err =
 let main args =
   match args |> Hello.message |> Safe.print_endline with
   | Error err -> handle err
-  | Ok _ -> 0
+  | Ok () -> 0
 
 let () = Sys.argv |> Cli.sanitize_args |> main |> exit
